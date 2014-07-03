@@ -1,0 +1,4 @@
+%ul
+  - entries.keys.each do |key|
+    %li
+      %a(href="#{request.path_info}/#{entries[key][:slug]}")= entries[key][:title]

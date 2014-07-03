@@ -1,0 +1,35 @@
+en:
+  site:
+    title: website title
+    menu:
+      home: Home
+      blog: blog
+      page_1: Page 1
+      languages: Translate to...
+    footer:
+      credits: This site was built using
+
+  blog:
+    title: Blog title
+    entry_template_title: "This is the title number"
+
+  about:
+    title: page1 title
+    body: !!html
+          <p>
+            Hey you can use raw HTML sintax
+          </p>
+
+  index:
+    body: !!html
+      <p><b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit, 
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+      pariatur. <a href='https://github.com/aboyon/vpa-ruby-basics' target='_blank'>LinkedIn Profile</a> Excepteur sint occaecat cupidatat non 
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>&nbsp;</p>
+
+  not_found:
+    header: Ups! something went wrong...
+    body: the page you're looking for is not available

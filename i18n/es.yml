@@ -1,0 +1,35 @@
+es:
+  site:
+    title: titulo del sitio
+    menu:
+      home: Inicio
+      blog: Blog
+      page_1: Pagina 1
+      languages: Traducir a...
+    footer:
+      credits: Este sitio lo armamos usando...
+
+  blog:
+    title: Titulo del blog
+    entry_template_title: "Este es el titulo numero"
+
+  about:
+    title: Titulo de pagina 1
+    body: !!html
+          <p>
+            Vieron! se puede usar HTML markup asi en seco nomas
+          </p>
+
+  index:
+    body: !!html
+      <p><b>Lorem ipsum</b> dolor sit amet, consectetur adipisicing elit, 
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+      pariatur. <a href='https://github.com/aboyon/vpa-ruby-basics' target='_blank'>LinkedIn Profile</a> Excepteur sint occaecat cupidatat non 
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>&nbsp;</p>
+
+  not_found:
+    header: Epa... algo se rompio
+    body: La pagina que queres entrar... no va mas

@@ -1,0 +1,46 @@
+!!!
+%html
+  %head
+    %title Sitio para mis amigos de VPA #{@current_locale} / #{request.path_info}
+    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+    %link(rel="stylesheet" href="/css/bootstrap.min.css")
+    %link(rel="stylesheet" href="/css/bootstrap-responsive.min.css")
+    %link(rel="stylesheet" href="/css/style.css")
+  %body.preview(data-spy='scroll' data-target='.subnav' data-offset='0')
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar.collapsed(data-toggle="collapse" data-target=".nav-collapse")
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand(href="/#{@current_locale}/") La gente de VPA
+          #main-menu.nav-collapse
+            %ul.nav
+              %li
+                %a(href="/#{@current_locale}/") #{I18n.t('site.menu.home')}
+              %li
+                %a(href="/#{@current_locale}/blog") #{I18n.t('site.menu.blog')}
+              %li
+                %a(href="/#{@current_locale}/blog/article-1") #{I18n.t('site.menu.page_1')}
+              %li.dropdown
+                %a.dropdown-toggle(href="#" data-toggle="dropdown") #{I18n.t('site.menu.languages')}
+                %ul.dropdown-menu(id="swatch-menu")
+                  - I18n.available_locales.each do |locale|
+                    %li
+                      %a(href="/#{locale}/")= @available_translations[locale.to_sym]
+    #wrapper.container
+      %header
+        %h1 #{I18n.t('site.title')}
+      #content
+        = yield
+    %footer.footer.container
+      %p
+        #{I18n.t('site.footer.credits')}
+        %a(href='http://www.sinatrarb.com/') Sinatra
+        ,
+        %a(href='http://www.haml.com/') HAML
+        ,
+        %a(href='http://twitter.github.com/bootstrap/') Twitter Bootstrap
+    %script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
+    %script(src='/js/bootstrap.min.js')
