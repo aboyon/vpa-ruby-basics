@@ -5,3 +5,7 @@ gem "i18n"
 gem 'rack-contrib'
 gem 'rspec'
 gem 'sinatra'
+
+group :development do
+	gem "pry"
+end
